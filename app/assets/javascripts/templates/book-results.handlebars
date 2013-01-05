@@ -1,0 +1,10 @@
+{{#each book in controller}}
+  {{#with book}}
+    {{id}}
+    <h1>{{ title }}</h1>
+    <img {{bindAttr src="image"}}>
+    <p>{{ authors }}</p>
+    <a {{action addBook view href=true}}>Add</a>
+    <hr>
+  {{/with}}
+{{/each}}
